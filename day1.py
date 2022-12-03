@@ -9,5 +9,5 @@ dataframe = pd.DataFrame(data)
 
 dataframe.loc[:,'Total'] = dataframe.sum(axis=1)
 
-max_element = df['Total'].max()
+max_element = dataframe['Total'].max()
 print(max_element)
