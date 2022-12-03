@@ -2,7 +2,7 @@ import pandas as pd
 
 filename = 'AOC22-D2-input.txt'
 
-    dataframe = pd.read_csv(filename, sep=' ')
+dataframe = pd.read_csv(filename, sep=' ')
     
 print(dataframe)
 
