@@ -3,7 +3,7 @@ import numpy as np
 
 filename = 'AOC22-D2-input.txt'
 
-dataframe = pd.read_csv(filename, sep=' ', header = None)
+df = pd.read_csv(filename, sep=' ', header = None)
 
 
 conditions = [
@@ -12,8 +12,8 @@ conditions = [
     (df['1'] = 'X')
 ]
 
-values = ['3', '2', '3']
+values = ['3', '2', '1']
 
 df['ThrowPoints'] = np.select(conditions, values)
 
-print(dataframe)
+print(df)
