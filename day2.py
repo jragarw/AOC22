@@ -7,9 +7,9 @@ df = pd.read_csv(filename, sep=' ', header = None)
 
 
 conditions = [
-    (df['1'].eq('Z')),
-    (df['1'].eq('Y')),
-    (df['1'].eq('X'))
+    (df['1'] == 'Z'),
+    (df['1'] == 'Y') 
+    (df['1'] == 'X')
 ]
 
 values = ['3', '2', '1']
