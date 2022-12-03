@@ -2,11 +2,8 @@ import pandas as pd
 
 filename = 'AOC22-D2-input.txt'
 
-with open(filename) as f:
-    data = [list(map(int, row.split())) for row in f.read().split('\n')]
-
-dataframe = pd.DataFrame(data)
-
+    dataframe = pd.read_csv(filename, sep=' ')
+    
 print(dataframe)
 
 ## dataframe.loc[:,'Total'] = dataframe.sum(axis=1)
