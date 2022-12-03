@@ -5,15 +5,11 @@ filename = 'AOC22-D2-input.txt'
 
 df = pd.read_csv(filename, sep=' ', header = None)
 
-
 conditions = [
-    (df['1'] == 'Z'),
-    (df['1'] == 'Y') 
-    (df['1'] == 'X')
-]
-
-values = ['3', '2', '1']
-
-df['ThrowPoints'] = np.select(conditions, values)
+    (df['1'] == 'X'),
+    (df['1'] == 'Y'),
+    (df['1'] == 'Z')]
+choices = ['1', '2', '3']
+df['ThrowCost'] = np.select(conditions, choices, default='NaN')
 
 print(df)
