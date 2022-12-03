@@ -11,3 +11,4 @@ dataframe.loc[:,'Total'] = dataframe.sum(axis=1)
 
 max_element = dataframe['Total'].max()
 print(max_element)
+print(dataframe['Total'].nlargest(n=3).sum())
