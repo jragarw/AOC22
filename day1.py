@@ -8,6 +8,6 @@ with open(filename) as f:
 
 dataframe = pd.DataFrame(data)
 
+df.loc[:,'Total'] = df.sum(axis=1)
+
 print(dataframe)
-
-
