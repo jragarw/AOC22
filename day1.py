@@ -7,3 +7,5 @@ with open(filename) as f:
     data = [list(map(int, row.split())) for row in f.read().split('\n\n')]
 
 dataframe = pd.DataFrame(data)
+
+display(df)
