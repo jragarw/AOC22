@@ -8,4 +8,6 @@ with open(filename) as f:
 
 dataframe = pd.DataFrame(data)
 
-display(df)
+display(dataframe)
+
+
