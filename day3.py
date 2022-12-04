@@ -15,6 +15,8 @@ df.set_axis(['BpkFull'], axis=1)
 
 df['BpkCompLen'] = df['BpkFull'].apply(len).div(2)
 
+df['BpkCompLen'].astype(pd.Int64Dtype())
+
 #df['1stComp'] = df['BpkFull'].str[:'BpkCompLen']
 df['1stComp'] = df.apply(lambda x: x['BpkFull'][0:x['BpkCompLen']],axis=1)
 
