@@ -25,10 +25,11 @@ df.loc[(df['Response'] == 'Z'), 'ThrowPoints'] = '3'
 
 df.loc[df['Result'].isnull(), 'Result'] = 0
 
-total = df['Result'] + df['ThrowPoints']  
-df = df.assign(total=total)
+dataframe.loc[:,'Total'] = dataframe.sum(axis=1)
 
 print(df)
+
+print(dataframe['Total'].sum())
 
 # Total = df['throwtotal'].sum()
 # print(Total)
