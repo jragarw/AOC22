@@ -27,6 +27,7 @@ df.loc[df['Result'].isnull(), 'Result'] = 0
 
 throwtotal = df['Result'] + df['ThrowPoints']
 
-dataframe.loc[:,'Total'] = dataframe.sum(axis=0)
-
 print(df)
+
+Total = df['throwtotal'].sum()
+print(Total)
