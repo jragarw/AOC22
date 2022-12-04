@@ -14,7 +14,7 @@ filename = 'AOC22-D2-input.txt'
 
 df = pd.read_csv(filename, sep=' ', header = None)
 
-df.set_axis(['Opponent', 'Response'], axis=1)
+df.set_axis(['Opponent', 'Response'], axis=1 inplace=True)
 
 df.loc[(df['Opponent'] == 'A') & (df['Response'] == 'X'), 'Result'] = 3
 df.loc[(df['Opponent'] == 'A') & (df['Response'] == 'Y'), 'Result'] = 1
