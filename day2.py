@@ -29,5 +29,5 @@ throwtotal = df['Result'] + df['ThrowPoints']
 
 print(df)
 
-Total = df['throwtotal'].sum()
-print(Total)
+# Total = df['throwtotal'].sum()
+# print(Total)
