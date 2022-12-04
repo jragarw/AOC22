@@ -24,5 +24,9 @@ df.loc[(df['Response'] == 'Y'), 'ThrowPoints'] = '2'
 df.loc[(df['Response'] == 'Z'), 'ThrowPoints'] = '3'
 
 df.loc[df['Result'].isnull(), 'Result'] = 0
-                                      
+
+throwtotal = df['Result'] + df['TrhwoPoints']
+
+dataframe.loc[:,'Total'] = dataframe.sum(axis=0)
+
 print(df)
