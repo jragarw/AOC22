@@ -15,11 +15,9 @@ df.set_axis(['BackpackFull'], axis=1)
 
 df['BackpackCompLen'] = df['BackpackFull'].apply(len).div(2)
 
-
-
+df1['FirstCompartment'] = df1['BackpackFull'].str['BackpackCompLen']
 
 print(df)
-
 
 # get the end time
 et = time.time()
