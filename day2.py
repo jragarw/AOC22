@@ -5,12 +5,14 @@ filename = 'AOC22-D2-input.txt'
 
 df = pd.read_csv(filename, sep=' ', header = None)
 
+df.set_axis(['Opponent', 'Response'], axis=1)
+
 conditions = [
-    df.loc[df['0'] == 'A' & df.loc[df['1'] == 'Y',
-    df.loc[df['0'] == 'B' & df.loc[df['1'] == 'Z',
-    df.loc[df['0'] == 'C' & df.loc[df['1'] == 'Y',
-    df.loc[df['0'] == 'B' & df.loc[df['1'] == 'Y',
-    df.loc[df['0'] == 'C' & df.loc[df['1'] == 'Z',
+    df.loc[df['Opponent'] == 'A' & df.loc[df['Response'] == 'Y',
+    df.loc[df['Opponent'] == 'B' & df.loc[df['Response'] == 'Z',
+    df.loc[df['Opponent'] == 'C' & df.loc[df['Response'] == 'Y',
+    df.loc[df['Opponent'] == 'B' & df.loc[df['Response'] == 'Y',
+    df.loc[df['Opponent'] == 'C' & df.loc[df['Response'] == 'Z',
 ]
 
 choices = ['6','6','6','3','3','3']
