@@ -1,6 +1,6 @@
 import pandas
 
-filename = 'AOC22-D2-input.txt'
+filename = 'AOC22-D3-input.txt'
 
 df = pd.read_csv(filename, sep=' ', header = None)
 
