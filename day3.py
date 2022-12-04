@@ -18,8 +18,11 @@ df['BpkCompLen'] = df['BpkFull'].apply(len).div(2)
 
 df['BpkCompLen'] = df['BpkCompLen'].astype(int)
 
-df['1stComp'] = df.apply(lambda x: x['BpkFull'][0:x['BpkCompLen']],axis=1, expand=True)
+df['1stComp'] = df.apply(lambda x: x['BpkFull'][0:x['BpkCompLen']],axis=1)
+
 #df['2ndComp'] = df.apply(lambda x: x['BpkFull'][0:x['BpkCompLen']],axis=1)
+
+df.name.str.findall(['1stComp'])
 
 print(df)
 
