@@ -6,15 +6,15 @@ filename = 'AOC22-D2-input.txt'
 df = pd.read_csv(filename, sep=' ', header = None)
 
 conditions = [
-    (df['0'] == 'A') & (df['Type'] == 'Y'),
-    (df['0'] == 'B') & (df['Type'] == 'Z'),
-    (df['0'] == 'C') & (df['Type'] == 'Y'),
-    (df['0'] == 'A') & (df['Type'] == 'X'),
-    (df['0'] == 'B') & (df['Type'] == 'Y'),
-    (df['0'] == 'C') & (df['Type'] == 'Z'),
+    (df['0'] == 'A') & (df['1'] == 'Y'),
+    (df['0'] == 'B') & (df['1'] == 'Z'),
+    (df['0'] == 'C') & (df['1'] == 'Y'),
+    (df['0'] == 'A') & (df['1'] == 'X'),
+    (df['0'] == 'B') & (df['1'] == 'Y'),
+    (df['0'] == 'C') & (df['1'] == 'Z'),
 ]
 
-choices = ['6', '6', '6','3','3','3']
+choices = ['6','6','6','3','3','3']
 
 df['result'] = np.select(conditions, choices, default='0')
 
