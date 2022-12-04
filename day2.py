@@ -14,9 +14,9 @@ conditions = [
     (df['0'] == 'C') & (df['Type'] == 'Z'),
 ]
 
-choices = ['6', '6', '6','3','3','3','0']
+choices = ['6', '6', '6','3','3','3']
 
-df['color'] = np.select(conditions, choices, default='black')
+df['result'] = np.select(conditions, choices, default='0')
 
 
 print(df)
