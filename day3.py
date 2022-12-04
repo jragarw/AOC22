@@ -2,6 +2,7 @@ import warnings
 warnings.simplefilter(action='ignore', category=FutureWarning)
 
 import pandas as pd
+import numpy as np
 import time
 
 # get the start time
@@ -15,7 +16,7 @@ df.set_axis(['BpkFull'], axis=1)
 
 df['BpkCompLen'] = df['BpkFull'].apply(len).div(2)
 
-df['BpkCompLen'].astype(pd.Int64Dtype())
+df['BpkCompLen'] = df['BpkCompLen'].astype(int)
 
 #df['1stComp'] = df['BpkFull'].str[:'BpkCompLen']
 df['1stComp'] = df.apply(lambda x: x['BpkFull'][0:x['BpkCompLen']],axis=1)
