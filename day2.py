@@ -1,5 +1,9 @@
 import pandas as pd
 import numpy as np
+import time
+
+# get the start time
+st = time.time()
 
 #   A = Rock        X = Rock     1   X = LOSE
 #   B = Paper       Y = Paper    2   Y = DRAW
@@ -33,5 +37,9 @@ df.loc[:,'Total'] = df.sum(axis=1)
 
 print(df['Total'].sum())
 
-# Total = df['throwtotal'].sum()
-# print(Total)
+# get the end time
+et = time.time()
+
+# get the execution time
+elapsed_time = et - st
+print('Execution time:', elapsed_time, 'seconds')
