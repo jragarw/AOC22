@@ -22,7 +22,7 @@ df['1stComp'] = df.apply(lambda x: x['BpkFull'][0:x['BpkCompLen']],axis=1)
 
 #df['2ndComp'] = df.apply(lambda x: x['BpkFull'][0:x['BpkCompLen']],axis=1)
 
-df.name.str.findall(['1stComp'])
+df['1stComp'].str.findall(['1stComp'])
 
 print(df)
 
