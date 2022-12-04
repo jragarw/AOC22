@@ -10,7 +10,7 @@ st = time.time()
 
 filename = 'AOC22-D3-input.txt'
 
-df = pd.read_csv(filename, sep='/n', header = None)
+df = pd.read_csv(filename, sep='\n', header = None)
 
 df.set_axis(['BpkFull'], axis=1)
 
@@ -18,11 +18,11 @@ df['BpkCompLen'] = df['BpkFull'].apply(len).div(2)
 
 df['BpkCompLen'] = df['BpkCompLen'].astype(int)
 
-#df['1stComp'] = df['BpkFull'].str[:'BpkCompLen']
-df['1stComp'] = df.apply(lambda x: x['BpkFull'][0:x['BpkCompLen']],axis=1)
-df['2ndComp'] = df.apply(lambda x: x['BpkFull'][-0:x['BpkCompLen']],axis=1)
+df['1stComp'] = df.apply(lambda x: x['BpkFull'][0:x['BpkCompLen']],axis=1, expand=True)
+#df['2ndComp'] = df.apply(lambda x: x['BpkFull'][0:x['BpkCompLen']],axis=1)
 
 print(df)
+
 
 # get the end time
 et = time.time()
