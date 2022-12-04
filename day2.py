@@ -5,14 +5,18 @@ filename = 'AOC22-D2-input.txt'
 
 df = pd.read_csv(filename, sep=' ', header = None)
 
-## conditions = [
-##     (df['1'] == 'X'),
-##     (df['1'] == 'Y'),
-##     (df['1'] == 'Z')
-## ]
+conditions = [
+    (df['0'] == 'A') & (df['Type'] == 'Y'),
+    (df['0'] == 'B') & (df['Type'] == 'Z'),
+    (df['0'] == 'C') & (df['Type'] == 'Y'),
+    (df['0'] == 'A') & (df['Type'] == 'X'),
+    (df['0'] == 'B') & (df['Type'] == 'Y'),
+    (df['0'] == 'C') & (df['Type'] == 'Z'),
+]
 
-## choices = ['1', '2', '3']
+choices = ['6', '6', '6','3','3','3','0']
 
-## df['ThrowCost'] = np.select(conditions, choices, default='NaN')
+df['color'] = np.select(conditions, choices, default='black')
+
 
 print(df)
