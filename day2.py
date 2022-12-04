@@ -29,7 +29,7 @@ df.loc[:,'Total'] = df.sum(axis=1)
 
 print(df)
 
-print(dataframe['Total'].sum())
+print(df['Total'].sum())
 
 # Total = df['throwtotal'].sum()
 # print(Total)
