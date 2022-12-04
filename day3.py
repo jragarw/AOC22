@@ -11,11 +11,11 @@ filename = 'AOC22-D3-input.txt'
 
 df = pd.read_csv(filename, sep='/n', header = None)
 
-df.set_axis(['BackpackFull'], axis=1)
+df.set_axis(['BpkFull'], axis=1)
 
-df['BackpackCompLen'] = df['BackpackFull'].apply(len).div(2)
+df['BpkCompLen'] = df['BpkFull'].apply(len).div(2)
 
-df['FirstCompartment'] = df['BackpackFull'].str['BackpackCompLen']
+df['1stComp'] = df['BpkFull'].str[:'BpkCompLen']
 
 print(df)
 
